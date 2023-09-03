@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANDING</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        .navbar {position:fixed;top:0;left:0;z-index: 2;width: 100%;background-color: white;}
+        .nav {border:1px solid black;border-radius: 0 0 10px 10px;min-height: 50px;}
+        .box{border:1px solid black;}
+        .menu{padding:1em;border-right: 1px solid black;}
+        .navbutton {border-left:1px solid black;padding: 1em;cursor: pointer;}
+        .altmenu {padding: 1em; text-align: center;border-bottom: 1px solid black;}
+        .nav .menu:last-child {border:0;}
+        .hero {margin-top:50px;}
+    </style>
+</head>
+<body>
+    <div class="grid navbar">
+        <div class="cell -12">
+            <div class="grid -middle -between nav">
+                <div class="cell" style="padding: 1em;">
+                    <h2>nameofthewebsite.com</h2>
+                </div>
+                <div onclick="toggleNav()" class="cell -auto -0_700 navbutton">
+                    <h2>MENU</h2>
+                </div>
+                <div class="cell -0 -auto_700">
+                    <div class="grid">
+                        <div class="cell menu">
+                            About
+                        </div>
+                        <div class="cell menu">
+                            Contact
+                        </div>
+                        <div class="cell menu">
+                            Destinations
+                        </div>
+                        <div class="cell menu">
+                            F.A.Q.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div id="navMenu" class="cell box -0 -0_700">
+                    <div class="grid -center -middle">
+                        <div class="cell -12 altmenu">
+                            About
+                        </div>
+                        <div class="cell -12 altmenu">
+                            Contact
+                        </div>
+                        <div class="cell -12 altmenu">
+                            Destinations
+                        </div>
+                        <div class="cell -12 altmenu">
+                            F.A.Q.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="grid hero box">
+        <div class="cell -12">
+            <div class="ratio -4x3 -7x3_700"></div>
+        </div>
+    </div>
+
+
+<script>
+    function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("-12");
+        document.getElementById("navMenu").classList.toggle("-0");
+    }
+</script>
+</body>
+</html>
